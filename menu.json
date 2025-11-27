@@ -1,0 +1,414 @@
+{
+    "categorias": [
+        {"nombre": "Todos", "clase": "todos"},
+        {"nombre": "Pizzas", "clase": "pizzas"},
+        {"nombre": "Hamburguesas", "clase": "hamburguesas"},
+        {"nombre": "Pastas", "clase": "pastas"},
+        {"nombre": "Postres", "clase": "postres"}
+    ],
+    "productos": [
+        {
+            "nombre": "Pizza Margherita",
+            "precio": "10.50 $",
+            "descripcion": "Tomate San Marzano, mozzarella fresca, albahaca y aceite de oliva extra virgen.",
+            "imagen": "images/pizza_margherita.jpg",
+            "categoria": "pizzas",
+            "rating": 95,
+            "tiempo_preparacion": "20 min",
+            "ingredientes": ["Masa tradicional", "Tomate San Marzano", "Mozzarella fresca", "Albahaca", "Aceite EVOO"]
+        },
+        {
+            "nombre": "Pizza Pepperoni",
+            "precio": "13.00 $",
+            "descripcion": "Mozzarella, salsa de tomate y abundante pepperoni premium.",
+            "imagen": "images/pizza_pepperoni.jpg",
+            "categoria": "pizzas",
+            "rating": 120,
+            "tiempo_preparacion": "25 min",
+            "ingredientes": ["Masa", "Salsa de tomate", "Mozzarella", "Pepperoni premium", "Orégano"]
+        },
+        {
+            "nombre": "Pizza Cuatro Quesos",
+            "precio": "12.50 $",
+            "descripcion": "Una mezcla de mozzarella, gorgonzola, parmesano y fontina.",
+            "imagen": "images/pizza_cuatroquesos.jpg",
+            "categoria": "pizzas",
+            "rating": 88,
+            "tiempo_preparacion": "20 min",
+            "ingredientes": ["Masa", "Mozzarella", "Gorgonzola", "Parmesano", "Fontina", "Nuez moscada"]
+        },
+        {
+            "nombre": "Pizza Vegetariana",
+            "precio": "11.50 $",
+            "descripcion": "Pimientos, champiñones, cebolla, aceitunas y espinacas frescas.",
+            "imagen": "images/pizza_vegetariana.jpg",
+            "categoria": "pizzas",
+            "rating": 60,
+            "tiempo_preparacion": "20 min",
+            "ingredientes": ["Masa integral", "Pimientos", "Champiñones", "Cebolla", "Aceitunas", "Espinacas"]
+        },
+        {
+            "nombre": "Pizza Hawaiana",
+            "precio": "11.00 $",
+            "descripcion": "Jamón cocido, piña fresca y mozzarella.",
+            "imagen": "images/pizza_hawaiana.jpg",
+            "categoria": "pizzas",
+            "rating": 75,
+            "tiempo_preparacion": "20 min",
+            "ingredientes": ["Masa", "Salsa de tomate", "Mozzarella", "Jamón cocido", "Piña fresca"]
+        },
+        {
+            "nombre": "Pizza de Pollo BBQ",
+            "precio": "13.50 $",
+            "descripcion": "Pollo desmenuzado, salsa BBQ y cebolla morada.",
+            "imagen": "images/pizza_bbq.jpg",
+            "categoria": "pizzas",
+            "rating": 105,
+            "tiempo_preparacion": "25 min",
+            "ingredientes": ["Masa", "Salsa BBQ", "Mozzarella", "Pollo desmenuzado", "Cebolla morada"]
+        },
+        {
+            "nombre": "Pizza Prosciutto",
+            "precio": "14.00 $",
+            "descripcion": "Rúcula, prosciutto di Parma y escamas de parmesano.",
+            "imagen": "images/pizza_prosciutto.jpg",
+            "categoria": "pizzas",
+            "rating": 98,
+            "tiempo_preparacion": "20 min",
+            "ingredientes": ["Masa", "Tomate", "Mozzarella", "Prosciutto di Parma", "Rúcula", "Parmesano"]
+        },
+        {
+            "nombre": "Pizza Mexicana",
+            "precio": "12.50 $",
+            "descripcion": "Carne picada especiada, jalapeños y frijoles refritos.",
+            "imagen": "images/pizza_mexicana.jpg",
+            "categoria": "pizzas",
+            "rating": 70,
+            "tiempo_preparacion": "25 min",
+            "ingredientes": ["Masa", "Carne picada", "Jalapeños", "Frijoles refritos", "Queso cheddar"]
+        },
+        {
+            "nombre": "Pizza Fungi",
+            "precio": "11.00 $",
+            "descripcion": "Variedad de champiñones salteados en ajo y perejil.",
+            "imagen": "images/pizza_fungi.jpg",
+            "categoria": "pizzas",
+            "rating": 65,
+            "tiempo_preparacion": "20 min",
+            "ingredientes": ["Masa", "Tomate", "Mozzarella", "Champiñones", "Ajo", "Perejil"]
+        },
+        {
+            "nombre": "Pizza Napolitana",
+            "precio": "10.00 $",
+            "descripcion": "Anchoas, alcaparras, orégano y un toque de ajo.",
+            "imagen": "images/pizza_napolitana.jpg",
+            "categoria": "pizzas",
+            "rating": 55,
+            "tiempo_preparacion": "20 min",
+            "ingredientes": ["Masa", "Tomate", "Anchoas", "Alcaparras", "Orégano", "Ajo"]
+        },
+        
+        {
+            "nombre": "Hamburguesa Clásica",
+            "precio": "8.50 $",
+            "descripcion": "Carne de res (180g), queso cheddar, lechuga, tomate y salsa especial.",
+            "imagen": "images/hamburguesa_clasica.jpg",
+            "categoria": "hamburguesas",
+            "rating": 150,
+            "tiempo_preparacion": "15 min",
+            "ingredientes": ["Pan de sésamo", "Carne 180g", "Queso cheddar", "Lechuga", "Tomate", "Salsa especial"]
+        },
+        {
+            "nombre": "Hamburguesa Doble",
+            "precio": "12.00 $",
+            "descripcion": "Doble carne (360g), doble queso, tocineta crujiente y cebolla caramelizada.",
+            "imagen": "images/hamburguesa_doble.jpg",
+            "categoria": "hamburguesas",
+            "rating": 180,
+            "tiempo_preparacion": "20 min",
+            "ingredientes": ["Pan brioche", "Doble carne", "Doble queso", "Tocineta", "Cebolla caramelizada"]
+        },
+        {
+            "nombre": "Hamburguesa Veggie",
+            "precio": "9.00 $",
+            "descripcion": "Patty de garbanzos y espinacas, aguacate y aderezo de yogur.",
+            "imagen": "images/hamburguesa_veggie.jpg",
+            "categoria": "hamburguesas",
+            "rating": 50,
+            "tiempo_preparacion": "15 min",
+            "ingredientes": ["Pan integral", "Patty de garbanzos", "Espinacas", "Aguacate", "Aderezo de yogur"]
+        },
+        {
+            "nombre": "Hamburguesa BBQ Smoke",
+            "precio": "10.50 $",
+            "descripcion": "Carne, aros de cebolla fritos, salsa BBQ ahumada y queso Monterey Jack.",
+            "imagen": "images/hamburguesa_bbq.jpg",
+            "categoria": "hamburguesas",
+            "rating": 130,
+            "tiempo_preparacion": "15 min",
+            "ingredientes": ["Pan de papa", "Carne", "Aros de cebolla", "Salsa BBQ ahumada", "Queso Monterey Jack"]
+        },
+        {
+            "nombre": "Hamburguesa Mexicana",
+            "precio": "9.50 $",
+            "descripcion": "Pico de gallo, jalapeños, queso pepper jack y crema agria.",
+            "imagen": "images/hamburguesa_mexicana.jpg",
+            "categoria": "hamburguesas",
+            "rating": 110,
+            "tiempo_preparacion": "15 min",
+            "ingredientes": ["Pan", "Carne", "Pico de gallo", "Jalapeños", "Queso Pepper Jack", "Crema agria"]
+        },
+        {
+            "nombre": "Hamburguesa de Pollo Crispy",
+            "precio": "8.00 $",
+            "descripcion": "Pechuga de pollo crujiente, mayonesa de ajo y coleslaw.",
+            "imagen": "images/hamburguesa_pollo.jpg",
+            "categoria": "hamburguesas",
+            "rating": 90,
+            "tiempo_preparacion": "15 min",
+            "ingredientes": ["Pan", "Pollo crujiente", "Mayonesa de ajo", "Coleslaw de repollo", "Tomate"]
+        },
+        {
+            "nombre": "Hamburguesa Trufada",
+            "precio": "14.00 $",
+            "descripcion": "Carne premium, queso brie derretido y mayonesa de trufa.",
+            "imagen": "images/hamburguesa_trufada.jpg",
+            "categoria": "hamburguesas",
+            "rating": 160,
+            "tiempo_preparacion": "20 min",
+            "ingredientes": ["Pan gourmet", "Carne premium", "Queso Brie", "Mayonesa de trufa", "Rúcula"]
+        },
+        {
+            "nombre": "Hamburguesa A Caballo",
+            "precio": "10.00 $",
+            "descripcion": "Con huevo frito, jamón y queso. Estilo argentino.",
+            "imagen": "images/hamburguesa_caballo.jpg",
+            "categoria": "hamburguesas",
+            "rating": 140,
+            "tiempo_preparacion": "15 min",
+            "ingredientes": ["Pan", "Carne", "Huevo frito", "Jamón", "Queso fundido", "Papas fritas"]
+        },
+        {
+            "nombre": "Hamburguesa Pesto",
+            "precio": "9.50 $",
+            "descripcion": "Mozzarella fresca, tomate seco y salsa pesto de albahaca.",
+            "imagen": "images/hamburguesa_pesto.jpg",
+            "categoria": "hamburguesas",
+            "rating": 80,
+            "tiempo_preparacion": "15 min",
+            "ingredientes": ["Pan", "Carne", "Mozzarella fresca", "Tomate seco", "Salsa pesto", "Albahaca"]
+        },
+        {
+            "nombre": "Sliders de Res",
+            "precio": "7.50 $",
+            "descripcion": "Tres mini hamburguesas con diferentes toppings.",
+            "imagen": "images/hamburguesa_sliders.jpg",
+            "categoria": "hamburguesas",
+            "rating": 70,
+            "tiempo_preparacion": "15 min",
+            "ingredientes": ["Mini pan", "Mini carne", "Queso", "Cebolla", "Pepinillo", "Salsa"]
+        },
+
+        {
+            "nombre": "Spaghetti Bolognesa",
+            "precio": "11.00 $",
+            "descripcion": "Salsa de carne de res cocida a fuego lento con tomate y hierbas.",
+            "imagen": "images/pasta_bolognesa.jpg",
+            "categoria": "pastas",
+            "rating": 110,
+            "tiempo_preparacion": "30 min",
+            "ingredientes": ["Spaghetti", "Carne de res", "Salsa de tomate", "Cebolla", "Zanahoria", "Vino tinto"]
+        },
+        {
+            "nombre": "Fettuccine Alfredo",
+            "precio": "12.50 $",
+            "descripcion": "Crema, mantequilla y queso parmesano, servido con pasta fettuccine.",
+            "imagen": "images/pasta_alfredo.jpg",
+            "categoria": "pastas",
+            "rating": 130,
+            "tiempo_preparacion": "25 min",
+            "ingredientes": ["Fettuccine", "Crema de leche", "Mantequilla", "Queso parmesano", "Pimienta"]
+        },
+        {
+            "nombre": "Lasaña de Carne",
+            "precio": "13.00 $",
+            "descripcion": "Capas de pasta, ragú de carne, salsa bechamel y queso mozzarella.",
+            "imagen": "images/pasta_lasaña.jpg",
+            "categoria": "pastas",
+            "rating": 140,
+            "tiempo_preparacion": "35 min",
+            "ingredientes": ["Láminas de pasta", "Ragú de carne", "Salsa bechamel", "Mozzarella", "Parmesano"]
+        },
+        {
+            "nombre": "Raviolis de Espinaca y Ricotta",
+            "precio": "14.50 $",
+            "descripcion": "Ravioles rellenos en salsa de mantequilla y salvia.",
+            "imagen": "images/pasta_raviolis.jpg",
+            "categoria": "pastas",
+            "rating": 95,
+            "tiempo_preparacion": "25 min",
+            "ingredientes": ["Ravioles", "Espinaca", "Ricotta", "Mantequilla", "Salvia", "Parmesano"]
+        },
+        {
+            "nombre": "Penne Arrabbiata",
+            "precio": "10.00 $",
+            "descripcion": "Salsa picante de tomate, ajo y pimiento rojo seco.",
+            "imagen": "images/pasta_arrabbiata.jpg",
+            "categoria": "pastas",
+            "rating": 80,
+            "tiempo_preparacion": "20 min",
+            "ingredientes": ["Penne", "Tomate", "Ajo", "Pimiento rojo seco", "Aceite de oliva", "Perejil"]
+        },
+        {
+            "nombre": "Risotto de Champiñones",
+            "precio": "15.00 $",
+            "descripcion": "Arroz Arborio cremoso con variedad de champiñones.",
+            "imagen": "images/pasta_risotto.jpg",
+            "categoria": "pastas",
+            "rating": 125,
+            "tiempo_preparacion": "30 min",
+            "ingredientes": ["Arroz Arborio", "Champiñones", "Caldo vegetal", "Vino blanco", "Parmesano", "Mantequilla"]
+        },
+        {
+            "nombre": "Pasta Frutti di Mare",
+            "precio": "18.00 $",
+            "descripcion": "Mezcla de mariscos frescos en salsa de tomate ligera.",
+            "imagen": "images/pasta_frutti.jpg",
+            "categoria": "pastas",
+            "rating": 150,
+            "tiempo_preparacion": "35 min",
+            "ingredientes": ["Pasta linguine", "Camarones", "Mejillones", "Almejas", "Salsa de tomate", "Vino blanco"]
+        },
+        {
+            "nombre": "Tortellini Panna e Prosciutto",
+            "precio": "13.50 $",
+            "descripcion": "Tortellinis rellenos en salsa cremosa con jamón prosciutto.",
+            "imagen": "images/pasta_tortellini.jpg",
+            "categoria": "pastas",
+            "rating": 115,
+            "tiempo_preparacion": "25 min",
+            "ingredientes": ["Tortellini", "Crema de leche", "Prosciutto", "Parmesano", "Nuez moscada"]
+        },
+        {
+            "nombre": "Cacio e Pepe",
+            "precio": "11.50 $",
+            "descripcion": "Clásica romana: Pecorino Romano, pimienta negra y agua de cocción de pasta.",
+            "imagen": "images/pasta_cacioepepe.jpg",
+            "categoria": "pastas",
+            "rating": 90,
+            "tiempo_preparacion": "20 min",
+            "ingredientes": ["Spaghetti", "Pecorino Romano", "Pimienta negra", "Agua de cocción"]
+        },
+        {
+            "nombre": "Ñoquis al Pesto",
+            "precio": "12.00 $",
+            "descripcion": "Ñoquis de patata con salsa pesto de albahaca fresca.",
+            "imagen": "images/pasta_gnochi.jpg",
+            "categoria": "pastas",
+            "rating": 100,
+            "tiempo_preparacion": "25 min",
+            "ingredientes": ["Ñoquis de patata", "Pesto de albahaca", "Piñones", "Parmesano", "Aceite EVOO"]
+        },
+
+        {
+            "nombre": "Tiramisú Clásico",
+            "precio": "6.50 $",
+            "descripcion": "Capas de bizcochos de soletilla, café, licor y crema de mascarpone.",
+            "imagen": "images/postre_tiramisu.jpg",
+            "categoria": "postres",
+            "rating": 160,
+            "tiempo_preparacion": "5 min",
+            "ingredientes": ["Bizcochos", "Café espresso", "Licor Amaretto", "Mascarpone", "Cacao en polvo"]
+        },
+        {
+            "nombre": "Brownie con Helado",
+            "precio": "7.00 $",
+            "descripcion": "Brownie de chocolate caliente, nueces y una bola de helado de vainilla.",
+            "imagen": "images/postre_brownie.jpg",
+            "categoria": "postres",
+            "rating": 155,
+            "tiempo_preparacion": "10 min",
+            "ingredientes": ["Brownie de chocolate", "Nueces", "Helado de vainilla", "Salsa de chocolate"]
+        },
+        {
+            "nombre": "Panna Cotta",
+            "precio": "5.50 $",
+            "descripcion": "Postre italiano de crema cocida, servido con coulis de frutos rojos.",
+            "imagen": "images/postre_pannacotta.jpg",
+            "categoria": "postres",
+            "rating": 90,
+            "tiempo_preparacion": "5 min",
+            "ingredientes": ["Crema de leche", "Azúcar", "Gelatina", "Vainilla", "Coulis de frutos rojos"]
+        },
+        {
+            "nombre": "Cheesecake de Oreo",
+            "precio": "7.50 $",
+            "descripcion": "Tarta de queso con base de galletas Oreo y cobertura de chocolate.",
+            "imagen": "images/postre_cheesecake.jpg",
+            "categoria": "postres",
+            "rating": 145,
+            "tiempo_preparacion": "5 min",
+            "ingredientes": ["Base de Oreo", "Crema de queso", "Azúcar", "Vainilla", "Cobertura de chocolate"]
+        },
+        {
+            "nombre": "Volcán de Chocolate",
+            "precio": "8.00 $",
+            "descripcion": "Bizcocho de chocolate con centro líquido y helado de pistacho.",
+            "imagen": "images/postre_volcan.jpg",
+            "categoria": "postres",
+            "rating": 170,
+            "tiempo_preparacion": "10 min",
+            "ingredientes": ["Chocolate", "Huevo", "Harina", "Azúcar", "Mantequilla", "Helado de pistacho"]
+        },
+        {
+            "nombre": "Crema Catalana",
+            "precio": "6.00 $",
+            "descripcion": "Postre cremoso con sabor a vainilla y capa de azúcar caramelizada.",
+            "imagen": "images/postre_cremacatalana.jpg",
+            "categoria": "postres",
+            "rating": 100,
+            "tiempo_preparacion": "5 min",
+            "ingredientes": ["Leche", "Yemas de huevo", "Azúcar", "Maicena", "Corteza de limón", "Canela"]
+        },
+        {
+            "nombre": "Helado Artesanal",
+            "precio": "4.50 $",
+            "descripcion": "Dos bolas de helado artesanal, sabores a elección.",
+            "imagen": "images/postre_helado.jpg",
+            "categoria": "postres",
+            "rating": 70,
+            "tiempo_preparacion": "5 min",
+            "ingredientes": ["Leche fresca", "Crema", "Azúcar", "Sabores naturales (Vainilla, Fresa, etc.)"]
+        },
+        {
+            "nombre": "Churros con Chocolate",
+            "precio": "5.00 $",
+            "descripcion": "Porción de churros recién hechos con una taza de chocolate caliente.",
+            "imagen": "images/postre_churros.jpg",
+            "categoria": "postres",
+            "rating": 135,
+            "tiempo_preparacion": "10 min",
+            "ingredientes": ["Harina de trigo", "Agua", "Sal", "Aceite vegetal", "Chocolate de taza"]
+        },
+        {
+            "nombre": "Milhojas de Frutas",
+            "precio": "7.00 $",
+            "descripcion": "Capas de hojaldre crujiente y crema pastelera con frutas de estación.",
+            "imagen": "images/postre_milhojas.jpg",
+            "categoria": "postres",
+            "rating": 110,
+            "tiempo_preparacion": "5 min",
+            "ingredientes": ["Hojaldre", "Crema pastelera", "Fresas", "Kiwi", "Durazno", "Azúcar glass"]
+        },
+        {
+            "nombre": "Mousse de Maracuyá",
+            "precio": "6.00 $",
+            "descripcion": "Mousse ligero y refrescante con el toque ácido del maracuyá.",
+            "imagen": "images/postre_mousse.jpg",
+            "categoria": "postres",
+            "rating": 95,
+            "tiempo_preparacion": "5 min",
+            "ingredientes": ["Maracuyá", "Leche condensada", "Crema de leche", "Gelatina sin sabor"]
+        }
+    ]
+}

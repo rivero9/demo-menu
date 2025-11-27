@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú Digital Interactivo</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" xintegrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0V4LLanw2qksYuRlEzr+zGxFNsFTQx84uF/2aUtsTfnB2/g2Pz/5v5R6E7g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="shortcut icon" href="images/app/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="styles/menu.css">
+    <script src="js/app.js" defer></script>
+    <script src="js/drag.js" defer></script>
+</head>
+<body>
+    <header class="w-full bg-amber-500">
+        <nav class="container mx-auto w-full px-4 py-2">
+            <a href="#" class="inline-block">
+                <img src="images/app/logo.png" alt="logo" width="80px">
+            </a>
+        </nav>
+    </header>
+
+    <div class="relative w-full h-56 md:h-72 bg-gray-900 overflow-hidden">
+        <img src="https://images.unsplash.com/photo-1544025162-d76694265947?q=80&w=1000&auto=format&fit=crop" 
+            alt="Portada Restaurante" 
+            class="w-full h-full object-cover opacity-60">
+        
+        <div class="absolute inset-0 flex flex-col justify-center items-center text-center text-white p-4">
+            <h1 class="text-3xl md:text-5xl font-bold font-['Open_Sans'] drop-shadow-md">
+                Sabor Venezolano
+            </h1>
+            <p class="text-gray-200 mt-2 text-sm md:text-lg font-light">
+                Las mejores hamburguesas de la ciudad
+            </p>
+            
+            <div id="badge-is-open" class="mt-4 bg-gray-300 text-white text-xs font-bold px-3 py-1 rounded-full flex items-center gap-2 backdrop-blur-sm">
+            </div>
+        </div>
+    </div>
+
+    <section class="px-8 pt-8 pb-16 w-full menu">
+        <div class="container mx-auto">
+            <div class="mb-4 flex justify-end">
+                <div class="relative w-full max-w-[700px] flex " id="search-container">
+                    <div class="hidden sm:inline-block dropdown-categories text-gray-500 z-10 relative rounded-l-full bg-gray-50 border-1 border-r-0 border-gray-300">
+                        <button type="button" id="dropdown-categories_btn" class="cursor-pointer px-5 py-2 px-4 relative after:bg-gray-300">Todos</button>
+                        <ul class="max-h-0 overflow-hidden opacity-0 dropdown-categories_content border-1 border-gray-400 rounded-2xl overflow-hidden bg-gray-50 w-max absolute bottom-0 left-0 translate-y-[100%]">
+                        </ul>
+                    </div>
+                    <input id="search-menu" type="text" class="w-full py-2 pl-5 pr-[60px] rounded-full sm:rounded-[0] sm:rounded-r-full bg-gray-50 border-1 sm:border-l-0 border-gray-300 placeholder:text-gray-500 !outline-0" placeholder="Buscar...">
+                    <i class="fa-solid fa-search absolute top-1/2 right-[20px] translate-y-[-50%] text-gray-500"></i>
+                </div>
+            </div>
+            
+            <div class="w-full flex justify-center sticky top-0 bg-[#fffa] pt-[10px] z-1 backdrop-blur-[5px] sm:hidden">
+                <ul id="draggable-menu" class="flex overflow-x-scroll w-[inherit] max-w-min no-scrollbar sm:hidden">
+                </ul>
+            </div>
+            
+            <div id="products-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full">
+            </div>
+        </div>
+    </section> 
+
+    <div id="product-modal" class="fixed h-[100dvh] top-0 left-0 w-full bg-black/80 backdrop-blur-sm flex flex-col z-50 overflow-y-auto md:px-4 md:py-16 md:flex md:justify-center md:items-center transition-opacity duration-300 opacity-0 pointer-events-none"> 
+        <div class="md:grid md:grid-cols-[40%_1fr] md:rounded-xl md:overflow-hidden md:w-7/10 md:max-w-[800px] md:max-h-[90dvh]">
+            <div id="modal-image-container" class="bg-cover bg-center w-full h-[40dvh] min-h-[300px] relative md:w-full md:h-full opacity-0 transition-opacity duration-500 ease-out">
+            </div>
+            <div id="modal-content" class="bg-white p-4 py-6 min-h-[60dvh] md:min-h-0 md:h-full md:overflow-y-auto rounded-t-3xl md:rounded-[0] translate-y-[200px] transition-transform duration-500 ease-out md:translate-y-[0] md:after:!hidden flex flex-col">
+                <div class="flex gap-x-3">
+                    <div class="grow-1">
+                        <h4 id="modal-name" class="text-xl leading-none mb-1"></h4>
+                        <p class="text-md text-gray-500">Precio: <b id="modal-price" class="text-amber-500"></b></p>
+                    </div>
+                    <button type="button" id="modal-like-button" class="cursor-pointer text-lg text-gray-700 p-3 rounded-full bg-gray-100 !w-max !h-max flex justify-center items-center">
+                        <i id="modal-like-icon" class="fa-regular fa-heart"></i>
+                    </button>
+                </div>
+                <ul class="flex justify-between my-6">
+                    <li class="text-sm w-full flex gap-x-2 justify-center items-center text-md">
+                        <i class="fa-solid fa-star text-yellow-400 text-lg"></i> 
+                        <span id="modal-rating"></span>
+                    </li>
+                    <li class="text-sm w-full flex gap-x-2 justify-center items-center text-md border-l-1 border-r-1 border-gray-400">
+                        <i class="fa-regular fa-clock text-yellow-400 text-lg"></i> 
+                        <span id="modal-time"></span>
+                    </li>
+                    <li class="text-sm w-full flex gap-x-2 justify-center items-center text-md">
+                        <i class="fa-solid fa-leaf text-yellow-400 text-lg"></i> 
+                        <span id="modal-ingredients-count"></span>
+                    </li>
+                </ul>
+                <p id="modal-description" class="text-gray-500"></p>
+                <p class="mt-4">Ingredientes</p>
+                <ul id="modal-ingredients-list" class="text-gray-500 mt-1 !pl-4">
+                    </ul>
+                <div class="pt-8 flex items-end">
+                    <a href="#" target="_blank" id="modal-order-button" class="cursor-pointer flex items-center justify-center gap-x-2 text-lg text-amber-500 text-center w-full px-8 py-3 rounded-full bg-amber-500 text-white mx-auto">
+                        Hacer Pedido <i class="fa-brands fa-whatsapp text-2xl"></i>
+                    </a>
+                </div>
+            </div>
+            <button type="button" id="close-modal-button" class="absolute top-4 right-4 cursor-pointer text-lg text-gray-500 p-3 rounded-full bg-white backdrop-blur-4 !w-max !h-max flex justify-center items-center">
+                <i class="fas fa-close"></i>
+            </button>
+        </div>
+    </div>
+
+    <footer class="bg-gray-900 text-gray-300 py-10 px-6 mt-auto">
+        <div class="container mx-auto grid gap-8 md:grid-cols-2">
+            <div>
+                <h3 class="text-white font-bold text-lg mb-4 border-b border-gray-700 pb-2 inline-block">
+                    <i class="fa-regular fa-clock text-amber-500 mr-2"></i> Horarios
+                </h3>
+                <ul class="space-y-2 text-sm">
+                    <li class="flex justify-between">
+                        <span>Lunes - Jueves</span>
+                        <span>11:00 AM - 10:00 PM</span>
+                    </li>
+                    <li class="flex justify-between text-amber-500 font-bold">
+                        <span>Viernes - Domingo</span>
+                        <span>11:00 AM - 12:00 PM</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div>
+                <h3 class="text-white font-bold text-lg mb-4 border-b border-gray-700 pb-2 inline-block">
+                    <i class="fa-solid fa-location-dot text-amber-500 mr-2"></i> Ubicación
+                </h3>
+                <p class="text-sm mb-4">Av. Principal, Edificio Azul, Local 2.</p>
+                
+                <a href="https://www.google.com/maps" target="_blank" 
+                class="block w-full text-center bg-gray-800 hover:bg-gray-700 border border-gray-600 rounded-lg py-3 text-sm transition">
+                    Ver en Google Maps <i class="fa-solid fa-arrow-up-right-from-square ml-1"></i>
+                </a>
+            </div>
+        </div>
+
+        <div class="text-center text-xs text-gray-600 mt-10 pt-4 border-t border-gray-800">
+            <p>Menú Digital desarrollado por jose_isaac</p>
+        </div>
+    </footer>
+
+</body>
+</html>

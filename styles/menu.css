@@ -1,0 +1,80 @@
+* {
+    font-family: "Open Sans", sans-serif;
+}
+
+.slider-active * {
+    cursor: grabbing !important;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+
+.no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+/* Estas clases controlarán la transición y la posición */
+/* transitions */
+html {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+.products-enter-left {
+    opacity: 0;
+    transform: translateX(-100%);
+}
+
+.products-enter-right {
+    opacity: 0;
+    transform: translateX(100%);
+}
+
+.products-active {
+    opacity: 1;
+    transform: translateX(0);
+    transition: opacity 300ms ease-out, transform 300ms ease-out; /* Velocidad de la transición */
+}
+
+/* show-card */
+/* #modal-content {
+    position: relative;
+    transform: translateY(-20px);
+} */
+
+#modal-content::after {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 20px;
+    transform: translateY(20px);
+    background: inherit;
+}
+
+.dropdown-categories_content {
+    overflow: hidden;
+    transform: translateY(-20px) !important;
+} 
+.dropdown-categories_content.open {
+    max-height: max-content;
+    opacity: 1;
+    transform: translateY(0) !important;
+    transition: opacity 300ms, transform 300ms, max-height 1ms 300ms; 
+    transition-timing-function: ease-in;
+}
+
+#dropdown-categories_btn::after {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+    width: 1px;
+    height: 70%;
+}
